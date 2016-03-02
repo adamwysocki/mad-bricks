@@ -1,3 +1,4 @@
+[ ![Codeship Status for adamwysocki/mad-bricks](https://codeship.com/projects/f95b8930-c2a8-0133-04b6-46ca2537ba45/status?branch=master)](https://codeship.com/projects/137844)
 <a href="https://codeclimate.com/github/adamwysocki/mad-bricks"><img src="https://codeclimate.com/github/adamwysocki/mad-bricks/badges/gpa.svg" /></a>
 
 # Mad Bricks
