@@ -1,3 +1,14 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="main-container">
+  <div {{action "changeState"}}>
+  {{game-board
+              scoreText=controller.scoreText
+              gameState=controller.gameState
+              livesText=controller.livesText
+              levelText=controller.levelText
+              action="boom"
+              scoreAction="score"
+              blockData=controller.bricks
+              hitAction="hitBrick"}}
+  {{outlet}}
+  </div>
+</div>
