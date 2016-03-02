@@ -4,7 +4,10 @@ var options = {
   modulePrefix: 'mad-bricks',
   filter: '//.*mad-bricks/.*/',
   antifilter: '//.*(tests|template).*/',
-  loaderExclusions: [],
+  loaderExclusions: [
+    'mad-bricks/initializers/export-application-global',
+    'mad-bricks/config'
+  ],
   enableCoverage: true,
   cliOptions: {
     reporters: ['lcov'],

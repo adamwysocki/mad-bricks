@@ -51,7 +51,7 @@ body {
 table {
   font-family: 'Coda Caption', sans-serif;
   margin: 0 auto;
-  padding: 0 auto;
+  padding: 0;
 }
 
 .title-header {
