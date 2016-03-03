@@ -1,14 +1,6 @@
 <div class="main-container">
-  <div {{action "changeState"}}>
-  {{game-board
-              scoreText=controller.scoreText
-              gameState=controller.gameState
-              livesText=controller.livesText
-              levelText=controller.levelText
-              action="boom"
-              scoreAction="score"
-              blockData=controller.bricks
-              hitAction="hitBrick"}}
+  <div>
+  {{game-board}}
   {{outlet}}
   </div>
 </div>

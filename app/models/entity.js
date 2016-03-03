@@ -11,45 +11,52 @@ const {
   computed
 } = Ember;
 
+const {
+  attr
+} = DS;
+
 export default DS.Model.extend({
 
   // Setup the object type for this entity
-  // so that we know how to draw and apply physics
-  objectType: DS.attr('number'),
+  // so that we know how to draw
+  objectType: attr('number'),
 
   // Setup the defaults if no parameters are given
   // Type represents the collision detector's handling
-  type: DS.attr('string'),
+  type: attr('string'),
 
   // Collision represents the type of collision
   // another object will receive upon colliding
-  collision: DS.attr('string'),
+  collision: attr('string'),
 
   // Width and Height
-  width: DS.attr('number'),
-  height: DS.attr('number'),
+  width: attr('number'),
+  height: attr('number'),
+
+  // Color
+  color: attr('string'),
 
   // Setup the positional data in 2D
 
   // Position
-  x: DS.attr('number'),
-  y: DS.attr('number'),
+  x: attr('number'),
+  y: attr('number'),
 
   // Velocity
-  vx: DS.attr('number'),
-  vy: DS.attr('number'),
+  vx: attr('number'),
+  vy: attr('number'),
 
   // Acceleration
-  ax: DS.attr('number'),
-  ay: DS.attr('number'),
+  ax: attr('number'),
+  ay: attr('number'),
 
   // Half size for quicker calculations
   halfWidth: computed('width', function() {
-    return this.get('width') * 0.05;
+    return this.get('width') * 0.5;
   }),
 
   halfHeight: computed('height', function() {
-    return this.get('height') * 0.05;
+    return this.get('height') * 0.5;
   }),
 
   // Getters for the mid point of the rect

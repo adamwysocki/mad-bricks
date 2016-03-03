@@ -12,6 +12,7 @@ export default Ember.Service.extend({
   initialize: function() {
     this.captureResize();
     $(window).on('resize', Ember.run.bind(this, this.captureResize));
+    this._super();
   }.on('init'),
 
   height: computed('_height', function() {
@@ -30,8 +31,6 @@ export default Ember.Service.extend({
 
     this.set('_height', height);
     this.set('_width', width);
-
-    console.log('height:',height,'width:',width);
   }
 
 });
